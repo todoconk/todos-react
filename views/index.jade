@@ -1,0 +1,28 @@
+doctype html
+html(lang="en")
+    head
+        title=title
+        link(href='/css/styles.css', rel='stylesheet')
+    body
+        div#todoapp
+            header
+                h1 Todos
+                div#todo-new
+
+            section#main
+
+            footer#summary
+
+        script(src="https://unpkg.com/react@latest/dist/react.js")
+        script(src="https://unpkg.com/react-dom@latest/dist/react-dom.js")
+        script(src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.15.3/axios.min.js")
+        script(src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js")
+
+        script(src="js/app.jsx", type="text/babel" )
+
+        | <script type="text/template" id="stats-template">
+        |  <% if (done) { %>
+        |  <a id="clear-completed">Clear <%= done %> completed <%= done == 1 ? 'item' : 'items' %></a>
+        |  <% } %>
+        |  <div class="todo-count"><b><%= remaining %></b> <%= remaining == 1 ? 'item' : 'items' %> left</div>
+        | </script>
